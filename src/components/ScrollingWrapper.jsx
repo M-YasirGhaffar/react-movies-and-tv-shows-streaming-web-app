@@ -28,13 +28,13 @@ const ScrollingWrapper = ({ movies, isLoading }) => {
   }
 
   return (
-    <div className="container mx-auto my-4">
+    <div className="container mx-auto my-4  m-1">
       {/* <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 hover:text-gray-600 transition duration-300 ease-in-out mx-5">
         {componentTitle}
       </h1> */}
       <div 
         ref={scrollRef} 
-        className="flex overflow-x-auto p-4 whitespace-nowrap scrollbar-hide"
+        className="flex overflow-x-auto p-4 mx-24 whitespace-nowrap scrollbar-hide"
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
         onTouchStart={() => setIsHovering(true)}
