@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.neumorphism {
+    background-color: #ffffff; /* Adjust based on your theme's background */
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #bebebe,
+               -5px -5px 10px #ffffff;
+  }
+  
+  .neumorphism:hover {
+    box-shadow: 2px 2px 5px #bebebe,
+               -2px -2px 5px #ffffff;
+  }
+
+body {
+    /* background: black; */
+}
