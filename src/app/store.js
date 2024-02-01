@@ -5,6 +5,7 @@ import trendingMoviesReducer from '../features/trendingMovies/trendingMoviesSlic
 import trendingTvShowsReducer from '../features/trendingTvShows/trendingTvShowsSlice';
 import topRatedMoviesReducer from '../features/topRatedMovies/topRatedMoviesSlice';
 import topRatedTvShowsReducer from '../features/topRatedTvShows/topRatedTvShowsSlice';
+import allReducer from '../features/all/allSlice';
 
 export const store = configureStore({
   reducer: {
@@ -14,6 +15,7 @@ export const store = configureStore({
     trendingTvShows: trendingTvShowsReducer,
     topRatedMovies: topRatedMoviesReducer,
     topRatedTvShows: topRatedTvShowsReducer,
+    all: allReducer,
   },
 });
 

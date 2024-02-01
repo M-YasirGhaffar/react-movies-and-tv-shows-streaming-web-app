@@ -5,10 +5,12 @@ import TrendingMovies from './TrendingMovies';
 import TrendingTVShows from './TrendingTVShows';
 import TopRatedMovies from './TopRatedMovies';
 import TopRatedTVShows from './TopRatedTvShows';
+import AllTrendingMoviesAndTvShows from './AllTrendingMoviesAndTvShows';
 
 const Dashboard = () => {
   return (
     <div>
+      <AllTrendingMoviesAndTvShows />
       <PopularMovies />
       <PopularTVShows />
       <TrendingMovies />
