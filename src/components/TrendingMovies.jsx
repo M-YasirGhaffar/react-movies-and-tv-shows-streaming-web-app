@@ -1,0 +1,25 @@
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchTrendingMovies } from '../features/trendingMovies/trendingMoviesSlice';
+import MoviesWrapper from './MoviesWrapper'; // Reuse the MoviesWrapper component
+
+const TrendingMovies = () => {
+  const dispatch = useDispatch();
+  const movies = useSelector((state) => state.trendingMovies.movies);
+  const status = useSelector((state) => state.trendingMovies.status);
+
+  useEffect(() => {
+    if (status === 'idle') {
+      dispatch(fetchTrendingMovies());
+    }
+  }, [status, dispatch]);
+
+  return (
+    <>
+        {console.log('trendingMovies' + movies)}
+      <MoviesWrapper componentTitle={'Trending Movies'} movies={movies} isLoading={status === 'loading'} />
+    </>
+  );
+};
+
+export default TrendingMovies;
