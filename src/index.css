@@ -27,3 +27,21 @@ body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+/* .scrollbar-hide::-webkit-scrollbar:hover { */
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+    /* scrollbar-width: auto;
+    scrollbar-color: #878b7e #dbdbdb; */
+
+  /* Chrome, Edge, and Safari */
+    /* width: 10px;
+
+    background: #dbdbdb; */
+
+  /* *::-webkit-scrollbar-thumb {
+    background-color: #878b7e;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+  } */
+/* } */
