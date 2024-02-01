@@ -3,6 +3,7 @@ import PopularMovies from './PopularMovies';
 import PopularTVShows from './PopularTVShows';
 import TrendingMovies from './TrendingMovies';
 import TrendingTVShows from './TrendingTVShows';
+import TopRatedMovies from './TopRatedMovies';
 
 const Dashboard = () => {
   return (
@@ -11,6 +12,7 @@ const Dashboard = () => {
       <PopularTVShows />
       <TrendingMovies />
       <TrendingTVShows />
+      <TopRatedMovies />
     </div>
   );
 };
