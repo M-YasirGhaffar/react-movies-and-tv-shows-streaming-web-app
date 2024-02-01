@@ -10,7 +10,6 @@ export const fetchPopularMovies = createAsyncThunk('/', async () => {
   
   try {
     const response = await axios.get(url);
-    console.log("Fetched popular movies:", response.data.results); // Log the data here
     return response.data.results;
   } catch (error) {
     console.error("Error fetching popular movies:", error);
