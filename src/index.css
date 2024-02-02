@@ -62,27 +62,68 @@ body {
 }
 
 .movie-info h1 {
-  color: #ffffff; /* A gold-like color for titles */
+  color: transparent; /* A gold-like color for titles */
+  -webkit-text-stroke: 1px #ffffff;
+
   margin-bottom: 10px; /* Spacing after the title */
+}
+
+.stars {
+  width: fit-content;
 }
 
 .stars i{
   color: #E3BA22;
+  /* opacity: .7; */
+}
+
+.stars:hover > i{
+  /* opacity: 1; */
+  transition: 1s ease;
+  transform: rotateY(180deg);
 }
 
 .movie-info p, .movie-info div {
-  color: #FFFFFF; /* White text color */
-  margin-bottom: 8px; /* Consistent spacing between paragraphs */
+  /* color: transparent; White text color */
+  /* text-shadow: 0px 0px 0px rgba(255,255,255,0.8); */
+  /* -webkit-text-stroke: 1px #ffffff; */
+  /* font-weight: 900; */
+/* line-height: 1em; */
+  /* margin-bottom: 8px; Consistent spacing between paragraphs */
   line-height: 1.5; /* Improved line spacing for readability */
 }
 
+/* .tagline {
+ */
+/* } */
+
 .movie-info .overview {
-  font-style: italic; /* Italicize the overview for emphasis */
+  /* color: #bebebe; */
+  text-align: left;
+  line-height: 1.5; /* Italicize the overview for emphasis */
 }
 
 .movie-info .rating {
   font-weight: bold; /* Make rating stand out */
-  color: #4CAF50; /* A green-like color for ratings */
+  color: #E3BA22; /* A green-like color for ratings */
+}
+
+.genres span {
+  /* color: #; */
+  border-radius: 18px;
+  margin: 4px;
+  padding: 6px 8px;
+  font-size: .7rem;
+  border-radius: 24px;
+  background: rgba(49, 49, 70, 0.9);
+  box-shadow: 0 8px 32px 0 rgba(205, 206, 209, 0.17);
+  backdrop-filter: blur( 0px );
+  -webkit-backdrop-filter: blur( 0px );
+}
+
+.genres span:hover {
+  transition: .5s ease;
+  transform: scale(1.1);
 }
 
 /* Additional hover effects for interactive elements (if any) */

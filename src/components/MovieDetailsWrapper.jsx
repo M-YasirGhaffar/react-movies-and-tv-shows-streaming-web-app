@@ -59,18 +59,18 @@ l                    allowFullScreen
 
                 {/* text content  */}
                 <div className="movie-info ml-5">
-                    <h1 className="text-4xl font-bold">{movie.title} </h1>
-                    <p className="text-lg ">{movie.tagline}</p>
-                    <p className="overview">Overview: {movie.overview}</p>
-                    <div className="rating">Rating: {movie.vote_average} ({movie.vote_count} votes)</div>
-                    <div className='stars text-3xl'>{stars.map(s => s)}</div>
-                    <p className="genres">Genres: {movie.genres.map(genre => genre.name).join(', ')}</p>
-                    <p className="release-date">Release Date: {movie.release_date}</p>
-                    <p className="runtime">Runtime: {movie.runtime} minutes</p>
-                    <p className="language">Original Language: {movie.original_language}</p>
-                    <p className="status">Status: {movie.status}</p>
-                    <p className="production-countries">Country: {movie.production_countries.map(country => country.name).join(', ')}</p>
-                    <p className="spoken-languages">Spoken Languages: {movie.spoken_languages.map(lang => lang.english_name).join(', ')}</p>
+                    <h1 className="text-5xl font-bold">{movie.title} </h1>
+                    <p className="tagline text-2xl text-gray-300">{movie.tagline}</p>
+                    <p className="overview my-1 text-sm text-gray-300">{movie.overview}</p>
+                    <div className="rating ">Rating: {movie.vote_average}/{movie.vote_count} votes</div>
+                    <div className='stars text-2xl'>{stars.map(s => s)}</div>
+                    <p className="release-date text-md text-gray-300 my-1">Release Date: {movie.release_date}</p>
+                    <p className="runtime text-md text-gray-300 my-1">Runtime: {movie.runtime} minutes</p>
+                    <p className="language text-md text-gray-300 my-1">Original Language: {movie.original_language}</p>
+                    <p className="status text-md text-gray-300 my-1">Status: {movie.status}</p>
+                    <p className="production-countries text-md text-gray-300 my-1">Country: {movie.production_countries.map(country => country.name).join(', ')}</p>
+                    <p className="spoken-languages text-md text-gray-300 my-1">Spoken Languages: {movie.spoken_languages.map(lang => lang.english_name).join(', ')}</p>
+                    <div className="genres text-md text-gray-300 my-1">Genres: {movie.genres.map(genre => <span>{genre.name}</span>)}</div>
                 </div>
             </div>
 
