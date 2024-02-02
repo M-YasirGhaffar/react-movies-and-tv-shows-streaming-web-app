@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchTrendingTvShows } from '../features/trendingTvShows/trendingTvShowsSlice';
-import MoviesWrapper from './MoviesWrapper'; // Assuming MoviesWrapper can also be used for TV shows or rename it to a more generic name like MediaWrapper
+import TVShowsWrapper from './TVShowsWrapper';
 
 const TrendingTVShows = () => {
   const dispatch = useDispatch();
@@ -14,9 +14,11 @@ const TrendingTVShows = () => {
     }
   }, [status, dispatch]);
 
+  console.log(tvShows)
+
   return (
     <>
-      <MoviesWrapper componentTitle={'Trending TV Shows'} movies={tvShows} isLoading={status === 'loading'} />
+      <TVShowsWrapper componentTitle={'Trending TV Shows'} tvShows={tvShows} isLoading={status === 'loading'} />
     </>
   );
 };

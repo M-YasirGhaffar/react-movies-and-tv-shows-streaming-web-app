@@ -69,14 +69,14 @@ body {
   } */
 /* } */
 
-.movie-details-content-container {
+.movie-details-content-container, .tv-details-content-container {
   background: rgba( 0, 0, 0, 0.35);
   box-shadow: 0 8px 32px 0 rgba(3, 3, 12, 0.75);
   backdrop-filter: blur( 12.5px );
   -webkit-backdrop-filter: blur( 12.5px );
 }
 
-.movie-details-content-container {
+.movie-details-content-container, .tv-details-content-container {
   background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
   backdrop-filter: blur(10px); /* Blur effect for background */
   /* border-radius: 15px; Rounded corners */
@@ -84,7 +84,7 @@ body {
   overflow: hidden; /* Ensures the child elements adhere to the border-radius */
 }
 
-.movie-info h1 {
+.movie-info h1, .tv-info h1 {
   color: transparent; /* A gold-like color for titles */
   -webkit-text-stroke: 1px #ffffff;
 
@@ -126,7 +126,7 @@ body {
   line-height: 1.5; /* Italicize the overview for emphasis */
 }
 
-.movie-info .rating {
+.movie-info .rating, .tv-info .rating {
   font-weight: bold; /* Make rating stand out */
   color: #E3BA22; /* A green-like color for ratings */
 }

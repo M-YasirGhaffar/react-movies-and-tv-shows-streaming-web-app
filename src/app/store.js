@@ -7,6 +7,8 @@ import topRatedMoviesReducer from '../features/topRatedMovies/topRatedMoviesSlic
 import topRatedTvShowsReducer from '../features/topRatedTvShows/topRatedTvShowsSlice';
 import allReducer from '../features/all/allSlice';
 import movieDetailReducer from '../features/movieDetail/movieDetailSlice';
+import tvDetailReducer from '../features/tvDetail/tvDetailSlice';
+import seasonDetailReducer from '../features/seasonDetail/seasonDetailSlice';
 
 export const store = configureStore({
   reducer: {
@@ -18,6 +20,8 @@ export const store = configureStore({
     topRatedTvShows: topRatedTvShowsReducer,
     all: allReducer,
     movieDetail: movieDetailReducer,
+    tvDetail: tvDetailReducer,
+    seasonDetail: seasonDetailReducer,
   },
 });
 

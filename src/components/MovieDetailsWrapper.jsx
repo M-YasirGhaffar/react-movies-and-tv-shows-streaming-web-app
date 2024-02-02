@@ -52,7 +52,7 @@ const MovieDetailsWrapper = ({ movie }) => {
                 <div className="movie-info ml-5">
                     <h1 className="text-5xl font-bold">{movie.title} </h1>
                     <p className="tagline text-xl text-gray-300">{movie.tagline}</p>
-                    <p className="overview my-1 text-sm text-gray-300">{movie.overview}</p>
+                    <p className="overview my-1 text-md text-gray-300">{movie.overview}</p>
                     <div className="rating ">Rating: {movie.vote_average}/{movie.vote_count} votes</div>
                     <div className='stars text-2xl'>{stars.map(s => s)}</div>
                     <p className="release-date text-md text-gray-300 my-1">Release Date: {movie.release_date}</p>
