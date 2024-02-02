@@ -38,19 +38,10 @@ const MovieDetailsWrapper = ({ movie }) => {
             }}
         >
 
-            <div className='movie-player m-5 w-full h-full'>
-                <iframe
-                    className="w-[75%] min-h-[80vh] m-auto rounded-xl border-2 shadow-2xl"
-                    style={{
-                        borderColor: 'rgba(0, 0, 0, 0.5)'
-                    }}
-                    src={`https://www.2embed.cc/embed/${movie.id}`}
-l                    allowFullScreen
-                />
-            </div>
 
 
-            <div className="flex flex-col justify-center items-center md:flex-row rounded-3xl p-5 m-10 mt-5 movie-details-content-container">
+
+            <div className="flex flex-col justify-center items-center md:flex-row rounded-3xl p-5 m-10 movie-details-content-container">
                 
                 <div className="poster-image m-5" style={{ minWidth: '300px', maxWidth: 'calc(15% - 1rem)' }}>
                     <img src={`${imageUrlBase}${movie.poster_path}`} alt={movie.title} className="rounded-lg" />
@@ -60,7 +51,7 @@ l                    allowFullScreen
                 {/* text content  */}
                 <div className="movie-info ml-5">
                     <h1 className="text-5xl font-bold">{movie.title} </h1>
-                    <p className="tagline text-2xl text-gray-300">{movie.tagline}</p>
+                    <p className="tagline text-xl text-gray-300">{movie.tagline}</p>
                     <p className="overview my-1 text-sm text-gray-300">{movie.overview}</p>
                     <div className="rating ">Rating: {movie.vote_average}/{movie.vote_count} votes</div>
                     <div className='stars text-2xl'>{stars.map(s => s)}</div>
@@ -72,6 +63,17 @@ l                    allowFullScreen
                     <p className="spoken-languages text-md text-gray-300 my-1">Spoken Languages: {movie.spoken_languages.map(lang => lang.english_name).join(', ')}</p>
                     <div className="genres text-md text-gray-300 my-1">Genres: {movie.genres.map(genre => <span>{genre.name}</span>)}</div>
                 </div>
+            </div>
+
+            <div className='movie-player m-5 mb-10 w-full h-full'>
+                <iframe
+                    className="w-[75%] min-h-[80vh] m-auto rounded-xl border-2 shadow-2xl"
+                    style={{
+                        borderColor: 'rgba(0, 0, 0, 0.5)'
+                    }}
+                    src={`https://www.2embed.cc/embed/${movie.id}`}
+                    allowFullScreen
+                />
             </div>
 
         </div>
