@@ -56,7 +56,7 @@ const MovieDetailsWrapper = ({ movie }) => {
                     <div className="rating ">Rating: {movie.vote_average}/{movie.vote_count} votes</div>
                     <div className='stars text-2xl'>{stars.map(s => s)}</div>
                     <p className="release-date text-md text-gray-300 my-1">Release Date: {movie.release_date}</p>
-                    <p className="runtime text-md text-gray-300 my-1">Runtime: {movie.runtime} minutes</p>
+                    <p className="runtime text-md text-gray-300 my-1">Runtime: {Math.floor(movie.runtime/60)} hours {movie.runtime%60} minutes</p>
                     <p className="language text-md text-gray-300 my-1">Original Language: {movie.original_language}</p>
                     <p className="status text-md text-gray-300 my-1">Status: {movie.status}</p>
                     <p className="production-countries text-md text-gray-300 my-1">Country: {movie.production_countries.map(country => country.name).join(', ')}</p>

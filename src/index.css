@@ -14,8 +14,31 @@
                -2px -2px 5px #ffffff;
   }
 
+/* body {
+    background: rgb(19, 18, 18);
+    color: #f6f6f6;
+} */
+
+/* // To enable dark mode
+document.documentElement.classList.add('dark')
+
+// To disable dark mode
+document.documentElement.classList.remove('dark') */
+
 body {
-    /* background: black; */
+  @apply bg-[#f6f6f6];
+}
+
+.dark body {
+  @apply bg-[#222222] text-white;
+}
+
+.dark .movies-wrapper-title{
+  @apply text-[#f6f6f6] hover:text-gray-300;
+}
+
+.movies-wrapper-title {
+  @apply  text-gray-800 hover:text-gray-700
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -56,7 +79,7 @@ body {
 .movie-details-content-container {
   background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
   backdrop-filter: blur(10px); /* Blur effect for background */
-  border-radius: 15px; /* Rounded corners */
+  /* border-radius: 15px; Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow */
   overflow: hidden; /* Ensures the child elements adhere to the border-radius */
 }
@@ -115,16 +138,13 @@ body {
   padding: 6px 8px;
   font-size: .7rem;
   border-radius: 24px;
-  background: rgba(49, 49, 70, 0.9);
+  background: rgba(0, 0, 0, 0.1);
   box-shadow: 0 8px 32px 0 rgba(205, 206, 209, 0.17);
   backdrop-filter: blur( 0px );
   -webkit-backdrop-filter: blur( 0px );
 }
 
-.genres span:hover {
-  transition: .5s ease;
-  transform: scale(1.1);
-}
+
 
 /* Additional hover effects for interactive elements (if any) */
 .movie-info a {
