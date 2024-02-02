@@ -52,3 +52,41 @@ body {
   backdrop-filter: blur( 12.5px );
   -webkit-backdrop-filter: blur( 12.5px );
 }
+
+.movie-details-content-container {
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+  backdrop-filter: blur(10px); /* Blur effect for background */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  overflow: hidden; /* Ensures the child elements adhere to the border-radius */
+}
+
+.movie-info h1 {
+  color: #E3BA22; /* A gold-like color for titles */
+  margin-bottom: 10px; /* Spacing after the title */
+}
+
+.movie-info p, .movie-info div {
+  color: #FFFFFF; /* White text color */
+  margin-bottom: 8px; /* Consistent spacing between paragraphs */
+  line-height: 1.5; /* Improved line spacing for readability */
+}
+
+.movie-info .overview {
+  font-style: italic; /* Italicize the overview for emphasis */
+}
+
+.movie-info .rating {
+  font-weight: bold; /* Make rating stand out */
+  color: #4CAF50; /* A green-like color for ratings */
+}
+
+/* Additional hover effects for interactive elements (if any) */
+.movie-info a {
+  color: #FF5722; /* A bright color for links */
+  text-decoration: none; /* No underline */
+}
+
+.movie-info a:hover {
+  text-decoration: underline; /* Underline on hover for links */
+}

@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const fetchMovieDetail = createAsyncThunk(
-  'movieDetail/fetchMovieDetail',
+  'movie/${movieId}',
   async (movieId) => {
     const apiKey = import.meta.env.VITE_TMDB_API_KEY;
     const response = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`);
