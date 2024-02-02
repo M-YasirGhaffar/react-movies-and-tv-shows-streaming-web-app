@@ -62,8 +62,12 @@ body {
 }
 
 .movie-info h1 {
-  color: #E3BA22; /* A gold-like color for titles */
+  color: #ffffff; /* A gold-like color for titles */
   margin-bottom: 10px; /* Spacing after the title */
+}
+
+.stars i{
+  color: #E3BA22;
 }
 
 .movie-info p, .movie-info div {
