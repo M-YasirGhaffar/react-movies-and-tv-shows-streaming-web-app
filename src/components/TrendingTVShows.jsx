@@ -14,8 +14,6 @@ const TrendingTVShows = () => {
     }
   }, [status, dispatch]);
 
-  console.log(tvShows)
-
   return (
     <>
       <TVShowsWrapper componentTitle={'Trending TV Shows'} tvShows={tvShows} isLoading={status === 'loading'} />

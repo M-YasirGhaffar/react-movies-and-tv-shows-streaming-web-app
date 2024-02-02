@@ -1,10 +1,17 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-export const fetchTopRatedTvShows = createAsyncThunk('/', async () => {
-  const apiKey = process.env.VITE_TMDB_API_KEY;
-  const response = await axios.get(`https://api.themoviedb.org/3/tv/top_rated?api_key=${apiKey}&page=1`);
-  return response.data.results;
+export const fetchTopRatedTvShows = createAsyncThunk('tvShows/fetchTopRated', async () => {
+
+  try {
+    const apiKey = import.meta.env.VITE_TMDB_API_KEY;
+    const response = await axios.get(`https://api.themoviedb.org/3/tv/top_rated?api_key=${apiKey}&page=1`);
+    return response.data.results;
+  } catch (error) {
+    console.error("Error fetching TopRatedTvShows:", error);
+    return (error.response.data);
+  }
+
 });
 
 const initialState = {

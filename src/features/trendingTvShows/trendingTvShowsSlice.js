@@ -3,18 +3,17 @@ import axios from 'axios';
 
 
 
-export const fetchTrendingTvShows = createAsyncThunk('trendingTvShows/fetch', async () => {
+export const fetchTrendingTvShows = createAsyncThunk('tvShows/fetchTrending', async () => {
   
   try {
     const apiKey = import.meta.env.VITE_TMDB_API_KEY;
     const url = `https://api.themoviedb.org/3/trending/tv/week?language=en-US&api_key=${apiKey}`;
     const response = await axios.get(url);
-    console.log("here is your data:" + 'Here is my Data' + response.data);
 
     return response.data.results;
   } catch (error) {
     console.error("Error fetching popular TV shows:", error);
-    throw error; // Propagate the error to be handled by the thunk's rejected case
+    throw error; 
   }
 });
 

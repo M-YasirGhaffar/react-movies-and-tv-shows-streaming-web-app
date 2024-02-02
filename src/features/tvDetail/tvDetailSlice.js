@@ -10,7 +10,8 @@ export const fetchTVShowDetail = createAsyncThunk(
       const response = await axios.get(`https://api.themoviedb.org/3/tv/${tvId}?api_key=${apiKey}`);
       return response.data;
     } catch (error) {
-      return error;
+      console.error("Error fetching tvShowsDetail details:", error);
+      return (error.response.data);
     }
   }
 );

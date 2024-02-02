@@ -43,7 +43,7 @@ const ScrollingWrapper = ({ movies, isLoading }) => {
         {movies.map(movie => (
           <div key={movie.id} className="inline-block p-1 m-2 rounded-md transition duration-300 ease-in-out hover:transform hover:-translate-y-1" style={{ minWidth: '200px' }}>
             <img src={`${imageUrlBase}${movie.poster_path}`} alt={movie.title} className="w-full h-auto rounded-xl" />
-            <p className="my-1 text-center">{movie.title}</p>
+            <p className="my-1 text-center">{movie.title || movie.original_name}</p>
           </div>
         ))}
       </div>

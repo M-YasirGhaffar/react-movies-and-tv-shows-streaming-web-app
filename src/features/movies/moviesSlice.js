@@ -4,7 +4,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-export const fetchPopularMovies = createAsyncThunk('/', async () => {
+export const fetchPopularMovies = createAsyncThunk('movie/fetchPopular', async () => {
   const apiKey = import.meta.env.VITE_TMDB_API_KEY; // Ensure you're using Vite's environment variable convention
   const url = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`;
   
@@ -13,7 +13,7 @@ export const fetchPopularMovies = createAsyncThunk('/', async () => {
     return response.data.results;
   } catch (error) {
     console.error("Error fetching popular movies:", error);
-    throw error; // Ensure to throw an error to be caught by the thunk's rejected case
+    throw error; 
   }
 });
 

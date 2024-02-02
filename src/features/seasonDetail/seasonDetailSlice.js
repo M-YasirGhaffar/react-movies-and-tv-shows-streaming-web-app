@@ -6,7 +6,6 @@ export const fetchSeasonDetails = createAsyncThunk(
   'tv/:id/season/:seasonNumber',
   async ({ tvId, seasonNumber }) => {
     try {
-      console.log('starting fetching');
       const apiKey = import.meta.env.VITE_TMDB_API_KEY; 
       const url = `https://api.themoviedb.org/3/tv/${tvId}/season/${seasonNumber}?api_key=${apiKey}`;
       const response = await axios.get(url);
