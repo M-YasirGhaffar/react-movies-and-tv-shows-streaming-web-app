@@ -1,6 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react';
+import {useNavigate} from 'react-router-dom'
 
 const ScrollingWrapper = ({ movies, isLoading }) => {
+  const navigate = useNavigate();
+
+  const handleClick = (mov, id) => {
+    if(mov.title) {
+      navigate(`/movie/${id}`)
+      return
+    }
+    navigate(`/tv/${id}`);
+  } 
+
   const imageUrlBase = 'https://image.tmdb.org/t/p/w500';
   const scrollRef = useRef(null);
   const [isHovering, setIsHovering] = useState(false);
@@ -29,9 +40,6 @@ const ScrollingWrapper = ({ movies, isLoading }) => {
 
   return (
     <div className="container mx-auto my-4  m-1 p-1">
-      {/* <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 hover:text-gray-600 transition duration-300 ease-in-out mx-5">
-        {componentTitle}
-      </h1> */}
       <div 
         ref={scrollRef} 
         className="flex overflow-x-auto px-4 mx-8 rounded-3xl whitespace-nowrap scrollbar-hide"
@@ -41,7 +49,9 @@ const ScrollingWrapper = ({ movies, isLoading }) => {
         onTouchEnd={() => setIsHovering(false)}
       >
         {movies.map(movie => (
-          <div key={movie.id} className="inline-block p-1 m-2 rounded-md transition duration-300 ease-in-out hover:transform hover:-translate-y-1" style={{ minWidth: '200px' }}>
+          <div key={movie.id} 
+            onClick={()=> {handleClick(movie, movie.id)}}
+          className="inline-block p-1 m-2 rounded-md transition duration-300 ease-in-out hover:transform hover:-translate-y-1" style={{ minWidth: '200px' }}>
             <img src={`${imageUrlBase}${movie.poster_path}`} alt={movie.title} className="w-full h-auto rounded-xl" />
             <p className="my-1 text-center">{movie.title || movie.original_name}</p>
           </div>
