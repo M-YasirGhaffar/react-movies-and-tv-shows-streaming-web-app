@@ -15,7 +15,7 @@ const PopularTVShows = () => {
   }, [status, dispatch]);
 
   // Pass the data and loading state to TVShowsWrapper for rendering
-  return <TVShowsWrapper componentTitle={'Popular TV Shows'} tvShows={tvShows} isLoading={status === 'loading'} />;
+  return <TVShowsWrapper tvShows={tvShows} isLoading={status === 'loading'} />;
 };
 
 export default PopularTVShows;

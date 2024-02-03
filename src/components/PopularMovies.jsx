@@ -16,7 +16,7 @@ const PopularMovies = () => {
 
   // Now, PopularMovies only fetches the data and passes it to MoviesWrapper for rendering
   return <>
-    <MoviesWrapper componentTitle={'Popular Movies'} movies={movies} isLoading={status === 'loading'} />
+    <MoviesWrapper movies={movies} isLoading={status === 'loading'} />
   </>;
 };
 

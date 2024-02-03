@@ -16,7 +16,7 @@ const TrendingMovies = () => {
 
   return (
     <>
-      <MoviesWrapper componentTitle={'Trending Movies'} movies={movies} isLoading={status === 'loading'} />
+      <MoviesWrapper movies={movies} isLoading={status === 'loading'} />
     </>
   );
 };

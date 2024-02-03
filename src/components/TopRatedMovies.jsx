@@ -16,7 +16,7 @@ const TopRatedMovies = () => {
 
   return (
     <>
-      <MoviesWrapper componentTitle={'Top Rated Movies'} movies={movies} isLoading={status === 'loading'} />
+      <MoviesWrapper movies={movies} isLoading={status === 'loading'} />
     </>
   );
 };

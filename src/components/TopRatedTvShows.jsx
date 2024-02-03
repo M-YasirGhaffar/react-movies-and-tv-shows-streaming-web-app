@@ -15,7 +15,7 @@ const TopRatedTVShows = () => {
 
   return (
     <>
-      <TVShowsWrapper componentTitle={'Top Rated TV Shows'} tvShows={tvShows} isLoading={status === 'loading'} />
+      <TVShowsWrapper tvShows={tvShows} isLoading={status === 'loading'} />
     </>
   );
 };

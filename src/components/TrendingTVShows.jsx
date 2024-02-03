@@ -16,7 +16,7 @@ const TrendingTVShows = () => {
 
   return (
     <>
-      <TVShowsWrapper componentTitle={'Trending TV Shows'} tvShows={tvShows} isLoading={status === 'loading'} />
+      <TVShowsWrapper tvShows={tvShows} isLoading={status === 'loading'} />
     </>
   );
 };
