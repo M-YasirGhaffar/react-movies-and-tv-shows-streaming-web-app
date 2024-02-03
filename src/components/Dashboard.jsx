@@ -4,7 +4,7 @@ import PopularTVShows from './PopularTVShows';
 import TrendingMovies from './TrendingMovies';
 import TrendingTVShows from './TrendingTVShows';
 import TopRatedMovies from './TopRatedMovies';
-import TopRatedTVShows from './TopRatedTvShows';
+import TopRatedTvShows from './TopRatedTvShows';
 import AllTrendingMoviesAndTvShows from './AllTrendingMoviesAndTvShows';
 
 const Dashboard = () => {
@@ -74,7 +74,7 @@ const Dashboard = () => {
             TV
           </button>
         </div>
-        {topRatedToggle === 'movie' ? <TopRatedMovies /> : <TopRatedTVShows />}
+        {topRatedToggle === 'movie' ? <TopRatedMovies /> : <TopRatedTvShows />}
       </div>
     </div>
   );
