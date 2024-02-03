@@ -1,4 +1,5 @@
 import React from 'react';
+import SeasonTabs from './SeasonTabs';
 
 const TVDetailsWrapper = ({ tvShow }) => {
   const imageUrlBase = 'https://image.tmdb.org/t/p/w500';
@@ -29,6 +30,7 @@ const TVDetailsWrapper = ({ tvShow }) => {
   const stars = countStars(tvShow.vote_average);
 
   return (
+    <>
     <div className="tv-details-container p-4 min-h-screen flex flex-col justify-center items-center"
       style={{
         background: `url(${imageUrlBase}${tvShow.backdrop_path})`,
@@ -58,7 +60,11 @@ const TVDetailsWrapper = ({ tvShow }) => {
           <div className="genres text-md text-gray-300 my-1">Genres: {tvShow.genres?.map(genre => <span key={genre.id}>{genre.name}</span>)}</div>
         </div>
       </div>
+
+
     </div>
+      {/* <SeasonTabs seasons={tvShow.seasons} tvId={tvShow.id} /> */}
+      </>
   );
 };
 

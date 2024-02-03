@@ -155,3 +155,7 @@ body {
 .movie-info a:hover {
   text-decoration: underline; /* Underline on hover for links */
 }
+
+.active {
+  @apply bg-cyan-600 ;
+}
