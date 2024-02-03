@@ -16,9 +16,9 @@ const MoviesWrapper = ({ movies, isLoading, componentTitle }) => {
 
   return (
     <div className="container mx-auto m-1">
-      <h1 className="movies-wrapper-title text-2xl md:text-3xl lg:text-4xl font-bold hover:-translate-y-1 w-fit transition duration-300 ease-in-out m-4 p-4 ml-24">
-        {componentTitle}
-      </h1>
+        {/* <h1 className="movies-wrapper-title text-2xl md:text-3xl lg:text-4xl font-bold hover:-translate-y-1 w-fit transition duration-300 ease-in-out m-4 p-4 ml-24">
+          {componentTitle}
+        </h1> */}
       <div className="flex flex-wrap justify-center  p-1">
         {movies.map(movie => (
           <div onClick={() => {
