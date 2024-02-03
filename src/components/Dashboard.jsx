@@ -4,7 +4,7 @@ import PopularTVShows from './PopularTVShows';
 import TrendingMovies from './TrendingMovies';
 import TrendingTVShows from './TrendingTVShows';
 import TopRatedMovies from './TopRatedMovies';
-import TopRatedTVShows from './TopRatedTVShows';
+import TopRatedTVShows from './TopRatedTvShows';
 import AllTrendingMoviesAndTvShows from './AllTrendingMoviesAndTvShows';
 
 const Dashboard = () => {

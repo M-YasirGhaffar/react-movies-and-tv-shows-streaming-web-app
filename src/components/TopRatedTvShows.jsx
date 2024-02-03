@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchTopRatedTvShows } from '../features/topRatedTvShows/topRatedTvShowsSlice';
 import TVShowsWrapper from './TVShowsWrapper';
-const TopRatedTVShows = () => {
+const TopRatedTvShows = () => {
   const dispatch = useDispatch();
   const tvShows = useSelector((state) => state.topRatedTvShows.tvShows);
   const status = useSelector((state) => state.topRatedTvShows.status);
@@ -20,4 +20,4 @@ const TopRatedTVShows = () => {
   );
 };
 
-export default TopRatedTVShows;
+export default TopRatedTvShows;
