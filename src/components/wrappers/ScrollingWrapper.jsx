@@ -55,7 +55,7 @@ const ScrollingWrapper = ({ movies, isLoading }) => {
           ease-in-out hover:transform hover:-translate-y-1 
           w-[150px] min-w-[150px]"
         >
-          <img src={movie.poster_path ? `${imageUrlBase}${movie.poster_path}` : '../../public/placeholder.jpeg'} alt={movie.title || movie.original_name} className="w-full h-auto rounded-xl" />
+          <img src={movie.poster_path ? `${imageUrlBase}${movie.poster_path}` : '/placeholder.jpeg'} alt={movie.title || movie.original_name} className="w-full h-auto rounded-xl" />
           <p className="my-1 text-center text-wrap break-word">{movie.title || movie.original_name}</p>
         </Link>
         ))}

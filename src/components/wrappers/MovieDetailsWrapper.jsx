@@ -47,9 +47,8 @@ const MovieDetailsWrapper = ({ movie }) => {
             p-1 sm:p-3 m-3 sm:scale-100 scale-[95%] sm:m-10 movie-details-content-container
             z-[10]
             ">
-                
                 <div className="poster-image m-5" style={{ minWidth: '300px', maxWidth: 'calc(15% - 1rem)' }}>
-                    <img src={movie.poster_path ? `${imageUrlBase}${movie.poster_path}` : '../../public/placeholder.jpeg'} alt={movie.title} className="rounded-lg" />
+                    <img src={movie.poster_path ? `${imageUrlBase}${movie.poster_path}` : '/placeholder.jpeg'} alt={movie.title} className="rounded-lg" />
                 </div>
 
 

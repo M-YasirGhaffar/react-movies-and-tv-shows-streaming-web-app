@@ -18,7 +18,7 @@ const TVShowsWrapper = ({ tvShows, isLoading }) => {
           text-sm sm:text-md font-thin sm:font-normal
           hover:transform hover:-translate-y-1 min-w-[120px] sm:min-w-[150px]" 
           style={{ maxWidth: 'calc(15% - 1rem)' }}>
-            <img src={`${imageUrlBase}${show.poster_path}`} alt={show.name} 
+            <img src={show.poster_path ? `${imageUrlBase}${show.poster_path}` : '/placeholder.jpeg'} alt={show.name} 
             className="w-full h-auto rounded-xl" />
             <p className="my-1 text-center text-wrap break-word">{show.name}</p>
         </Link>
