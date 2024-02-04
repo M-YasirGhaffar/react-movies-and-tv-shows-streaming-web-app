@@ -23,7 +23,7 @@ const TVShowsWrapper = ({ tvShows, isLoading }) => {
             handleClick(show.id)
           }}
           className="p-1 m-2 rounded-md transition duration-300 ease-in-out 
-          text-sm sm:text-xl font-thin sm:font-normal
+          text-sm sm:text-md font-thin sm:font-normal
           hover:transform hover:-translate-y-1 min-w-[100px] sm:min-w-[150px]" style={{ maxWidth: 'calc(15% - 1rem)' }}>
             <img src={`${imageUrlBase}${show.poster_path}`} alt={show.name} 
             className="w-full h-auto rounded-xl" />

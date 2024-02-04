@@ -26,7 +26,7 @@ const MoviesWrapper = ({ movies, isLoading}) => {
           style={{ maxWidth: 'calc(15% - 1rem)' }}>
             <img src={movie.poster_path ? `${imageUrlBase}${movie.poster_path}` : '../../public/placeholder.jpeg'} alt={movie.title} 
             className="w-full h-auto rounded-xl" />
-            <p className="my-1 sm:text-xl text-sm sm:font-normal font-extralight text-center text-wrap break-word">{movie.title}</p>
+            <p className="my-1 sm:text-md text-sm sm:font-normal font-extralight text-center text-wrap break-word">{movie.title}</p>
           </div>
         ))}
       </div>
