@@ -27,7 +27,7 @@ const SeasonsAndEpisodes = ({ seasons, tvId }) => {
     }, [tvId, selectedSeason]);
 
     return (
-        <div className="flex flex-col bg-[#111111] text-gray-200 max-h-screen">
+        <div className="flex flex-col bg-[#111111] text-gray-200 h-screen">
             <div className="flex justify-start items-center">
                 
                 <select

@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
-import {useNavigate} from 'react-router-dom'
+import { Link } from 'react-router-dom'; // Import Link
+
 
 const ScrollingWrapper = ({ movies, isLoading }) => {
-  const navigate = useNavigate();
 
   const handleClick = (mov, id) => {
     if(mov.title) {
@@ -49,14 +49,15 @@ const ScrollingWrapper = ({ movies, isLoading }) => {
         onTouchEnd={() => setIsHovering(false)}
       >
         {movies.map(movie => (
-          <div key={movie.id} 
-            onClick={()=> {handleClick(movie, movie.id)}}
+          <Link key={movie.id} 
+          to={movie.title ? `/movie/${movie.id}` : `/tv/${movie.id}`}
           className="inline-block p-1 m-2 rounded-md transition duration-300 
           ease-in-out hover:transform hover:-translate-y-1 
-          w-[150px] min-w-[150px]">
-            <img src={movie.poster_path ? `${imageUrlBase}${movie.poster_path}` : '../../public/placeholder.jpeg'} alt={movie.title} className="w-full h-auto rounded-xl" />
-            <p className="my-1 text-center text-wrap break-word">{movie.title || movie.original_name}</p>
-          </div>
+          w-[150px] min-w-[150px]"
+        >
+          <img src={movie.poster_path ? `${imageUrlBase}${movie.poster_path}` : '../../public/placeholder.jpeg'} alt={movie.title || movie.original_name} className="w-full h-auto rounded-xl" />
+          <p className="my-1 text-center text-wrap break-word">{movie.title || movie.original_name}</p>
+        </Link>
         ))}
       </div>
     </div>
