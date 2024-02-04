@@ -1,5 +1,4 @@
 import React from 'react';
-import SeasonTabs from './SeasonTabs';
 import SeasonsAndEpisodes from './SeasonsAndEpisodes';
 
 const TVDetailsWrapper = ({ tvShow }) => {

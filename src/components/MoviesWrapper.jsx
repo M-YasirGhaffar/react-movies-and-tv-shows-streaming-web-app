@@ -18,11 +18,11 @@ const MoviesWrapper = ({ movies, isLoading}) => {
     <div className="container mx-auto m-1">
       <div className="flex flex-wrap justify-center  p-1">
         {movies.map(movie => (
-          <div onClick={() => {
+          <div title={`${movie.title}`} onClick={() => {
             handleClick(movie.id)
           }} key={movie.id} className="p-1 m-2 rounded-md transition duration-300 ease-in-out hover:transform hover:-translate-y-1" style={{ minWidth: '200px', maxWidth: 'calc(15% - 1rem)' }}>
             <img src={`${imageUrlBase}${movie.poster_path}`} alt={movie.title} className="w-full h-auto rounded-xl" />
-            <p className="my-1 text-center">{movie.title}</p>
+            <p className="my-1 text-center text-wrap break-word">{movie.title}</p>
           </div>
         ))}
       </div>
