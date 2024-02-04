@@ -40,7 +40,7 @@ const TVDetailsWrapper = ({ tvShow }) => {
       }}
     >
       <BackButton />
-      <div className="flex flex-col justify-center items-center md:flex-row rounded-3xl p-5 m-10 tv-details-content-container">
+      <div className="flex flex-col justify-center items-center md:flex-row rounded-3xl sm:scale-100 scale-75 p-2 sm:p-5 m-3 sm:m-10 tv-details-content-container">
         <div className="poster-image m-5" style={{ minWidth: '300px', maxWidth: 'calc(15% - 1rem)' }}>
           <img src={`${imageUrlBase}${tvShow.poster_path}`} alt={tvShow.name} className="rounded-lg" />
         </div>
