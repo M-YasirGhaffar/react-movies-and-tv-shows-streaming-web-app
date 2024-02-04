@@ -1,4 +1,5 @@
 import React from 'react';
+import BackButton from './BackButton';
 
 const MovieDetailsWrapper = ({ movie }) => {
     const imageUrlBase = 'https://image.tmdb.org/t/p/w500';
@@ -40,6 +41,7 @@ const MovieDetailsWrapper = ({ movie }) => {
 
 
 
+            <BackButton />
 
             <div className="flex flex-col justify-center items-center md:flex-row rounded-3xl p-5 m-10 movie-details-content-container">
                 
@@ -65,9 +67,9 @@ const MovieDetailsWrapper = ({ movie }) => {
                 </div>
             </div>
 
-            <div className='movie-player m-5 mb-10 w-full h-full'>
+            <div className='movie-player m-5 mb-10 w-full h-full z-[50]'>
                 <iframe
-                    className="w-[75%] min-h-[80vh] m-auto rounded-xl border-2 shadow-2xl"
+                    className="w-[75%] min-h-[80vh] z-[50] m-auto rounded-xl border-2 shadow-2xl"
                     style={{
                         borderColor: 'rgba(0, 0, 0, 0.5)'
                     }}

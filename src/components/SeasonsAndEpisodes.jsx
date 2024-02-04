@@ -65,9 +65,9 @@ const SeasonsAndEpisodes = ({ seasons, tvId }) => {
                     ))}
                 </div>
                 {selectedEpisode && (
-                    <div className="movie-player w-3/4">
+                    <div className="movie-player w-3/4 z-[50]">
                         <iframe
-                            className="w-full h-full"
+                            className="w-full h-full z-[50]"
                             src={`https://multiembed.mov/?video_id=${tvId}&tmdb=1&s=${selectedSeason}&e=${selectedEpisode.episode_number}`}
                             allowFullScreen
                         ></iframe>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import BackButton from './BackButton';
 
 const MoviesWrapper = ({ movies, isLoading}) => {
   const navigate = useNavigate();
@@ -15,7 +16,7 @@ const MoviesWrapper = ({ movies, isLoading}) => {
   }
 
   return (
-    <div className="container mx-auto m-1">
+    <div className="container mx-6 m-1">
       <div className="flex flex-wrap justify-center  p-1">
         {movies.map(movie => (
           <div title={`${movie.title}`} onClick={() => {
