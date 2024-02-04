@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
 import MovieDetail from './components/MovieDetail';
 import TvDetail from './components/TvDetail';
+import SearchResult from './components/SearchResult';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
           <Route path='/movie/:id' element={<MovieDetail />} />
 
           <Route path='/tv/:id' element={<TvDetail />} />
+
+          <Route path="/search/:query" element={<SearchResult />} />
 
         </Routes>
       </Router>

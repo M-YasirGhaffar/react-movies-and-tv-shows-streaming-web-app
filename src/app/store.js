@@ -9,6 +9,7 @@ import allReducer from '../features/all/allSlice';
 import movieDetailReducer from '../features/movieDetail/movieDetailSlice';
 import tvDetailReducer from '../features/tvDetail/tvDetailSlice';
 import seasonDetailReducer from '../features/seasonDetail/seasonDetailSlice';
+import searchReducer from '../features/search/searchSlice';
 
 export const store = configureStore({
   reducer: {
@@ -22,6 +23,7 @@ export const store = configureStore({
     movieDetail: movieDetailReducer,
     tvDetail: tvDetailReducer,
     seasonDetail: seasonDetailReducer,
+    search: searchReducer,
   },
 });
 
