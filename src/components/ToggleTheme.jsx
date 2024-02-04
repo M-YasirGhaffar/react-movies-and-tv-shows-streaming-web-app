@@ -20,7 +20,7 @@ const ThemeToggle = () => {
   };
 
   return (
-    <div>
+    <div className='scale-75 sm:scale-100'>
       <input type="checkbox" className="hidden checkbox" id="checkbox" onChange={handleThemeToggle} checked={isDarkMode} />
       <label htmlFor="checkbox" className="checkbox-label">
         <div className={`border-2 border-yellow-600 inline-block z-10 px-2 py-1 rounded-full ${isDarkMode ? 'dark:bg-[#222222]' : 'bg-white'}`}>
