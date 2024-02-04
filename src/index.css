@@ -39,11 +39,11 @@ body {
 }
 
 .dark body {
-  @apply bg-[#222222] text-white;
+  @apply bg-[#222222] text-white transition-all delay-300;
 }
 
 .dark .movies-wrapper-title{
-  @apply text-[#f6f6f6] hover:text-gray-300;
+  @apply text-[#f6f6f6] hover:text-gray-300 transition-all delay-300;
 }
 
 .movies-wrapper-title {

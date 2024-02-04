@@ -6,6 +6,7 @@ import TrendingTVShows from './TrendingTVShows';
 import TopRatedMovies from './TopRatedMovies';
 import TopRatedTvShows from './TopRatedTvShows';
 import AllTrendingMoviesAndTvShows from './AllTrendingMoviesAndTvShows';
+import Navbar from './Navbar';
 
 const Dashboard = () => {
   const [popularToggle, setPopularToggle] = useState('movie');
@@ -14,6 +15,7 @@ const Dashboard = () => {
 
   return (
     <div>
+      <Navbar />
       <AllTrendingMoviesAndTvShows />
 
       <div className="mb-8">

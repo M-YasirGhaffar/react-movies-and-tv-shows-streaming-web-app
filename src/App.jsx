@@ -6,18 +6,23 @@ import TvDetail from './components/TvDetail';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Dashboard />} />
-        
-        <Route path="*" element={<Dashboard />} />
 
-        <Route path='/movie/:id' element={<MovieDetail/>} />
+    <>
+      <Router>
+        <Routes>
 
-        <Route path='/tv/:id' element={<TvDetail />} />
+          <Route path="/" element={<Dashboard />} />
 
-      </Routes>
-    </Router>
+          <Route path="*" element={<Dashboard />} />
+
+          <Route path='/movie/:id' element={<MovieDetail />} />
+
+          <Route path='/tv/:id' element={<TvDetail />} />
+
+        </Routes>
+      </Router>
+    </>
+
   );
 }
 
