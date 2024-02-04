@@ -45,6 +45,7 @@ const MovieDetailsWrapper = ({ movie }) => {
 
             <div className="flex flex-col justify-center items-center md:flex-row rounded-3xl 
             p-1 sm:p-3 m-3 sm:scale-100 scale-[90%] sm:m-10 movie-details-content-container
+            z-[10]
             ">
                 
                 <div className="poster-image m-5" style={{ minWidth: '300px', maxWidth: 'calc(15% - 1rem)' }}>
