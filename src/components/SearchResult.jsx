@@ -11,9 +11,7 @@ const SearchResults = () => {
   const { query } = useParams();
   const dispatch = useDispatch();
   const { results, status, error } = useSelector((state) => state.search);
-
-  console.log(results)
-
+  
   useEffect(() => {
     dispatch(searchMulti(query));
   }, [dispatch, query]);

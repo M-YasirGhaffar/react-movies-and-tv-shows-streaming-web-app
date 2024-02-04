@@ -17,7 +17,6 @@ const Dashboard = () => {
     <div>
       <Navbar />
       <AllTrendingMoviesAndTvShows />
-
       <div className="mb-8">
         <h1 className="movies-wrapper-title inline-block text-2xl md:text-3xl lg:text-4xl font-bold hover:-translate-y-1 w-fit transition duration-300 ease-in-out m-4 p-4 ml-32">Popular</h1>
         <div className="inline-block mb-4">

@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import { fetchTVShowDetail } from '../features/tvDetail/tvDetailSlice'; // Adjust the path as necessary
 import TVDetailsWrapper from './TVDetailsWrapper'; // Assuming you have this component
 
+
 const TVDetail = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
