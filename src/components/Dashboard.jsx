@@ -17,10 +17,10 @@ const Dashboard = () => {
     <div>
       <Navbar />
       <AllTrendingMoviesAndTvShows />
-      <div className="mb-8">
+      <div className="mb-8 sm:text-start text-center">
         <h1 className="movies-wrapper-title scale-75 sm:scale-100 inline-block text-2xl 
         md:text-3xl lg:text-4xl font-bold hover:-translate-y-1 w-fit transition duration-300
-         ease-in-out m-1 p-3 sm:m-2 sm:p-4 md:ml-32">Popular</h1>
+         ease-in-out m-1 p-2 sm:m-2 sm:p-4 sm:ml-24">Popular</h1>
         <div className="inline-block mb-4 sm:scale-100 scale-75">
           <button
             className={`mr-2 px-4 py-2 font-bold rounded-md text-white ${popularToggle === 'movie' ? 'bg-cyan-600' : 'bg-gray-400'}`}

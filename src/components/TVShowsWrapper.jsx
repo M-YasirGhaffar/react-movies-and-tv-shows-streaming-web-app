@@ -22,7 +22,9 @@ const TVShowsWrapper = ({ tvShows, isLoading }) => {
           onClick={() => {
             handleClick(show.id)
           }}
-          className="p-1 m-2 rounded-md transition duration-300 ease-in-out hover:transform hover:-translate-y-1" style={{ minWidth: '200px', maxWidth: 'calc(15% - 1rem)' }}>
+          className="p-1 m-2 rounded-md transition duration-300 ease-in-out 
+          text-sm sm:text-xl font-thin sm:font-normal
+          hover:transform hover:-translate-y-1 min-w-[100px] sm:min-w-[150px]" style={{ maxWidth: 'calc(15% - 1rem)' }}>
             <img src={`${imageUrlBase}${show.poster_path}`} alt={show.name} className="w-full h-auto rounded-xl" />
             <p className="my-1 text-center text-wrap break-word">{show.name}</p>
           </div>

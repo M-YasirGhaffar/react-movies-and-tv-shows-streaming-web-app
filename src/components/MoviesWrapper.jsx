@@ -21,11 +21,11 @@ const MoviesWrapper = ({ movies, isLoading}) => {
         {movies.map(movie => (
           <div title={`${movie.title}`} onClick={() => {
             handleClick(movie.id)
-          }} key={movie.id} className="p-1 m-2 rounded-md transition duration-300 ease-in-out hover:transform hover:-translate-y-1" 
-          
-          style={{ minWidth: '150px', maxWidth: 'calc(15% - 1rem)' }}>
+          }} key={movie.id} 
+          className=" sm:min-w-[150px] min-w-[100px] p-1 m-1 sm:m-2 rounded-md transition duration-300 ease-in-out hover:transform hover:-translate-y-1" 
+          style={{ maxWidth: 'calc(15% - 1rem)' }}>
             <img src={`${imageUrlBase}${movie.poster_path}`} alt={movie.title} className="w-full h-auto rounded-xl" />
-            <p className="my-1 text-center text-wrap break-word">{movie.title}</p>
+            <p className="my-1 sm:text-xl text-sm sm:font-normal font-extralight text-center text-wrap break-word">{movie.title}</p>
           </div>
         ))}
       </div>
