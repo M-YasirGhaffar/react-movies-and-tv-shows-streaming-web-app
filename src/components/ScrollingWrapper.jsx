@@ -51,7 +51,9 @@ const ScrollingWrapper = ({ movies, isLoading }) => {
         {movies.map(movie => (
           <div key={movie.id} 
             onClick={()=> {handleClick(movie, movie.id)}}
-          className="inline-block p-1 m-2 rounded-md transition duration-300 ease-in-out hover:transform hover:-translate-y-1 w-[200px]" style={{ minWidth: '200px' }}>
+          className="inline-block p-1 m-2 rounded-md transition duration-300 
+          ease-in-out hover:transform hover:-translate-y-1 
+          w-[150px] min-w-[150px]">
             <img src={`${imageUrlBase}${movie.poster_path}`} alt={movie.title} className="w-full h-auto rounded-xl" />
             <p className="my-1 text-center text-wrap break-word">{movie.title || movie.original_name}</p>
           </div>
