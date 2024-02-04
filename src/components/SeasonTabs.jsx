@@ -1,19 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import EpisodeList from './EpisodeList';
 
 const SeasonTabs = ({ seasons, tvId }) => {
-  const [selectedSeason, setSelectedSeason] = useState(seasons[0]?.season_number);
+  // Find the maximum season number to ensure you cover all seasons.
+  const maxSeasonNumber = Math.max(...seasons.map(season => season.season_number));
+  
+  // Generate an array of valid seasons from 1 to maxSeasonNumber.
+  const validSeasonNumbers = Array.from({ length: maxSeasonNumber }, (_, i) => i + 1);
+  
+  const [selectedSeason, setSelectedSeason] = useState(1); // Default to season 1
 
   return (
-    <div className="flex flex-col">
-      <div className="season-tabs">
-        {seasons.map((season) => (
+    <div className="flex flex-col bg-[#111111] text-gray-200">
+      <div className="season-tabs rounded-lg flex justify-start items-center">
+        {validSeasonNumbers.map((seasonNumber) => (
           <button
-            key={season.season_number}
-            onClick={() => setSelectedSeason(season.season_number)}
-            className={`tab px-4 py-2 m-2 font-bold rounded-md text-black border border-1 ${selectedSeason === season.season_number ? 'active' : ''}`}
+            key={seasonNumber}
+            onClick={() => setSelectedSeason(seasonNumber)}
+            className={`tab px-4 py-2 my-3 mx-2 font-bold rounded-md ${selectedSeason === seasonNumber ? 'active' : ''}`}
           >
-            Season {season.season_number}
+            Season {seasonNumber}
           </button>
         ))}
       </div>

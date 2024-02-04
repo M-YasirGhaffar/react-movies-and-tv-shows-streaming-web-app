@@ -24,11 +24,11 @@ const EpisodeList = ({ tvId, seasonNumber }) => {
   }, [tvId, seasonNumber]);
 
   return (
-    <div className="flex">
-      <div className="episode-list w-1/4 overflow-y-auto">
+    <div className="flex max-h-screen">
+      <div className="episode-list w-1/4 overflow-y-auto overflow-x-hidden">
         {episodes.map((episode) => (
-          <div key={episode.id} onClick={() => setSelectedEpisode(episode)} className="episode-item cursor-pointer p-2 hover:bg-gray-200">
-            {episode.name}
+          <div key={episode.id} onClick={() => setSelectedEpisode(episode)} className="episode-item cursor-pointer p-2 hover:bg-gray-200 hover:text-black border-b-1">
+            Episode {episode.episode_number}: {episode.name}
           </div>
         ))}
       </div>
@@ -36,11 +36,12 @@ const EpisodeList = ({ tvId, seasonNumber }) => {
         <div className="movie-player w-3/4">
         {console.log(tvId, seasonNumber, selectedEpisode.episode_number)}
           <iframe
-            className="w-full h-full rounded-xl shadow-2xl"
+            className="w-full h-screen rounded-xl shadow-2xl"
             // src={`https://embed.smashystream.com/playere.php?tmdb=${tvId}&season=${seasonNumber}&episode=${selectedEpisode.episode_number}`}
-            src={`https://www.2embed.cc/embedtv/${tvId}s=${seasonNumber}&e=${selectedEpisode.episode_number}`}
+            src={`https://multiembed.mov/?video_id=${tvId}&tmdb=1&s=${seasonNumber}&e=${selectedEpisode.episode_number}`}
             allowFullScreen
           ></iframe>
+                  {console.log(tvId, seasonNumber, selectedEpisode.episode_number)}
         </div>
       )}
     </div>

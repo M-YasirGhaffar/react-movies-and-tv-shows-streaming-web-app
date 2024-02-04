@@ -1,5 +1,6 @@
 import React from 'react';
 import SeasonTabs from './SeasonTabs';
+import SeasonsAndEpisodes from './SeasonsAndEpisodes';
 
 const TVDetailsWrapper = ({ tvShow }) => {
   const imageUrlBase = 'https://image.tmdb.org/t/p/w500';
@@ -63,7 +64,7 @@ const TVDetailsWrapper = ({ tvShow }) => {
 
 
     </div>
-      {/* <SeasonTabs seasons={tvShow.seasons} tvId={tvShow.id} /> */}
+          <SeasonsAndEpisodes seasons={tvShow.seasons} tvId={tvShow.id} />
       </>
   );
 };

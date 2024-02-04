@@ -157,5 +157,45 @@ body {
 }
 
 .active {
-  @apply bg-cyan-600 ;
+  /* @apply bg-cyan-600 ; */
+  transition: .3s ease-in-out;
+  /* transform: scale(  1.1); */
+  border-bottom: 2px solid cyan;
+}
+
+
+/* .episode-list */
+
+.episode-list::-webkit-scrollbar {
+  width: 6px;
+  height:64px;
+}
+.episode-list::-webkit-scrollbar-button {
+  width: 26px;
+  height: 100vh;
+}
+.episode-list::-webkit-scrollbar-thumb {
+  background: #2b2b2bab;
+  border: 1px solid #ffffff;
+  border-radius: 31px;
+}
+.episode-list::-webkit-scrollbar-thumb:hover {
+  background: #2b2b2bab;
+}
+.episode-list::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+.episode-list::-webkit-scrollbar-track {
+  background: #cacaca;
+  border: 1px solid #ffffff;
+  border-radius: 82px;
+}
+.episode-list::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+.episode-list::-webkit-scrollbar-track:active {
+  background: #666666;
+}
+.episode-list::-webkit-scrollbar-corner {
+  background: transparent;
 }
