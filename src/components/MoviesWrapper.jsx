@@ -16,7 +16,7 @@ const MoviesWrapper = ({ movies, isLoading}) => {
   }
 
   return (
-    <div className="container mx-6 m-1">
+    <div className="mx-8 flex justify-center">
       <div className="flex flex-wrap justify-center  p-1">
         {movies.map(movie => (
           <div title={`${movie.title}`} onClick={() => {
