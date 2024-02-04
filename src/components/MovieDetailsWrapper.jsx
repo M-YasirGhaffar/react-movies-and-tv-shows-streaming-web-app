@@ -76,7 +76,7 @@ const MovieDetailsWrapper = ({ movie }) => {
                     style={{
                         borderColor: 'rgba(0, 0, 0, 0.5)'
                     }}
-                    src={`https://embed.smashystream.com/playere.php?tmdb=${movie.id}`}
+                    src={`https://multiembed.mov/?video_id=${movie.id}&tmdb=1`}
                     allowFullScreen
                 />
             </div>
