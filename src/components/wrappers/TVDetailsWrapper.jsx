@@ -1,6 +1,6 @@
 import React from 'react';
-import SeasonsAndEpisodes from './SeasonsAndEpisodes';
-import BackButton from './BackButton';
+import SeasonsAndEpisodes from '../SeasonsAndEpisodes';
+import BackButton from '../ui/BackButton';
 
 const TVDetailsWrapper = ({ tvShow }) => {
   const imageUrlBase = 'https://image.tmdb.org/t/p/w500';

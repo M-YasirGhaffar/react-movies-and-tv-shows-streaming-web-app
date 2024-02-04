@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPopularTvShows } from '../features/tvShows/tvShowsSlice';
-import TVShowsWrapper from './TVShowsWrapper'; // Import TVShowsWrapper
+import TVShowsWrapper from './wrappers/TVShowsWrapper'; // Import TVShowsWrapper
 
 const PopularTVShows = () => {
   const dispatch = useDispatch();

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAll } from '../features/all/allSlice';
-import ScrollingWrapper from './ScrollingWrapper';
+import ScrollingWrapper from './wrappers/ScrollingWrapper';
 
 const AllTrendingMoviesAndTvShows = () => {
   const dispatch = useDispatch();

@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { searchMulti } from '../features/search/searchSlice';
-import MoviesWrapper from './MoviesWrapper';
-import TVShowsWrapper from './TVShowsWrapper';
-import Navbar from './Navbar';
-import BackButton from './BackButton';
+import MoviesWrapper from './wrappers/MoviesWrapper';
+import TVShowsWrapper from './wrappers/TVShowsWrapper';
+import Navbar from './ui/Navbar';
+import BackButton from './ui/BackButton';
 
 const SearchResults = () => {
   const { query } = useParams();

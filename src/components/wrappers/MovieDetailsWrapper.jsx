@@ -1,5 +1,5 @@
 import React from 'react';
-import BackButton from './BackButton';
+import BackButton from '../ui/BackButton';
 
 const MovieDetailsWrapper = ({ movie }) => {
     const imageUrlBase = 'https://image.tmdb.org/t/p/w500';

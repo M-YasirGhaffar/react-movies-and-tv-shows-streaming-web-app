@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { fetchTVShowDetail } from '../features/tvDetail/tvDetailSlice'; // Adjust the path as necessary
-import TVDetailsWrapper from './TVDetailsWrapper'; // Assuming you have this component
+import TVDetailsWrapper from './wrappers/TVDetailsWrapper'; // Assuming you have this component
 
 
 const TVDetail = () => {

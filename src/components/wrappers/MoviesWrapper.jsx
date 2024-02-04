@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import BackButton from './BackButton';
+import BackButton from '../ui/BackButton';
 
 const MoviesWrapper = ({ movies, isLoading}) => {
   const navigate = useNavigate();

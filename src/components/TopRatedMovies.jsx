@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchTopRatedMovies } from '../features/topRatedMovies/topRatedMoviesSlice';
-import MoviesWrapper from './MoviesWrapper'; // Reuse the MoviesWrapper component
+import MoviesWrapper from './wrappers/MoviesWrapper'; // Reuse the MoviesWrapper component
 
 const TopRatedMovies = () => {
   const dispatch = useDispatch();

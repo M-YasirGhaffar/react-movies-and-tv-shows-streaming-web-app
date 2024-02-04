@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { fetchMovieDetail } from '../features/movieDetail/movieDetailSlice';
-import MovieDetailsWrapper from './MovieDetailsWrapper'; // Assuming you have this component
+import MovieDetailsWrapper from './wrappers/MovieDetailsWrapper'; // Assuming you have this component
 
 const MovieDetail = () => {
   const { id } = useParams();

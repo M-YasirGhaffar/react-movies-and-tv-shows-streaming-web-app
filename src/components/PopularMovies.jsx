@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPopularMovies } from '../features/movies/moviesSlice';
-import MoviesWrapper from './MoviesWrapper'; // Import MoviesWrapper
+import MoviesWrapper from './wrappers/MoviesWrapper'; // Import MoviesWrapper
 
 const PopularMovies = () => {
   const dispatch = useDispatch();

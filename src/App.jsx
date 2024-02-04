@@ -4,6 +4,7 @@ import Dashboard from './components/Dashboard';
 import MovieDetail from './components/MovieDetail';
 import TvDetail from './components/TvDetail';
 import SearchResult from './components/SearchResult';
+import Footer from './components/ui/Footer';
 
 function App() {
   return (
