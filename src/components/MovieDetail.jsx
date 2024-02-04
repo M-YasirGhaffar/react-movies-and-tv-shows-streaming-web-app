@@ -16,7 +16,7 @@ const MovieDetail = () => {
     }
   }, [id, dispatch]);
 
-  if (status === 'loading') return <div>Loading...</div>;
+  if (status === 'loading') return <div><i className="fa-solid fa-spinner"></i></div>;
   if (!movie) return <div>Movie not found</div>;
 
   return <MovieDetailsWrapper movie={movie} />;

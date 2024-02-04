@@ -18,7 +18,7 @@ const TVDetail = () => {
     }
   }, [id, dispatch]);  
 
-  if (status === 'loading') return <div>Loading...</div>;
+  if (status === 'loading') return <div><i className="fa-solid fa-spinner"></i></div>;
   if (!tvShow) return <div>TV show not found</div>;
 
   return <TVDetailsWrapper tvShow={tvShow} />;

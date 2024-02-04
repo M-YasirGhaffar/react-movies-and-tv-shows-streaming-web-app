@@ -11,7 +11,7 @@ const TVShowsWrapper = ({ tvShows, isLoading }) => {
   };
 
   if (isLoading) {
-    return <div className="text-center font-bold">Loading...</div>;
+    return <div className="text-center font-bold"><i className="fa-solid fa-spinner"></i></div>;
   }
 
   return (
@@ -25,7 +25,8 @@ const TVShowsWrapper = ({ tvShows, isLoading }) => {
           className="p-1 m-2 rounded-md transition duration-300 ease-in-out 
           text-sm sm:text-xl font-thin sm:font-normal
           hover:transform hover:-translate-y-1 min-w-[100px] sm:min-w-[150px]" style={{ maxWidth: 'calc(15% - 1rem)' }}>
-            <img src={`${imageUrlBase}${show.poster_path}`} alt={show.name} className="w-full h-auto rounded-xl" />
+            <img src={`${imageUrlBase}${show.poster_path}`} alt={show.name} 
+            className="w-full h-auto rounded-xl" />
             <p className="my-1 text-center text-wrap break-word">{show.name}</p>
           </div>
         ))}

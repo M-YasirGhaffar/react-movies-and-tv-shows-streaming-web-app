@@ -35,7 +35,7 @@ const ScrollingWrapper = ({ movies, isLoading }) => {
   }, [isHovering]);
 
   if (isLoading) {
-    return <div className="text-center font-bold">Loading...</div>;
+    return <div className="text-center font-bold"><i className="fa-solid fa-spinner"></i></div>;
   }
 
   return (
@@ -54,7 +54,7 @@ const ScrollingWrapper = ({ movies, isLoading }) => {
           className="inline-block p-1 m-2 rounded-md transition duration-300 
           ease-in-out hover:transform hover:-translate-y-1 
           w-[150px] min-w-[150px]">
-            <img src={`${imageUrlBase}${movie.poster_path}`} alt={movie.title} className="w-full h-auto rounded-xl" />
+            <img src={movie.poster_path ? `${imageUrlBase}${movie.poster_path}` : '../../public/placeholder.jpeg'} alt={movie.title} className="w-full h-auto rounded-xl" />
             <p className="my-1 text-center text-wrap break-word">{movie.title || movie.original_name}</p>
           </div>
         ))}

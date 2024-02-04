@@ -17,7 +17,7 @@ const SearchResults = () => {
   }, [dispatch, query]);
 
   if (status === 'loading') {
-    return <div>Loading...</div>;
+    return <div><i className="fa-solid fa-spinner"></i></div>;
   }
 
   if (status === 'failed') {
