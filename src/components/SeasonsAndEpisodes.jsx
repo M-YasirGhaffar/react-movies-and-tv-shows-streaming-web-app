@@ -52,7 +52,7 @@ const SeasonsAndEpisodes = ({ seasons, tvId }) => {
                     )}
                 </div>
             </div>
-            <div className="flex flex-1 overflow-hidden sm:flex-row flex-col font-thin sm:font-semibold">
+            <div className="flex flex-1 overflow-hidden sm:flex-row flex-col-reverse font-thin sm:font-semibold">
                 <div className="episode-list sm:w-1/4 w-full overflow-y-auto overflow-hidden">
                     {episodes.map((episode) => (
                         <div key={episode.id} onClick={() =>{ 
@@ -67,7 +67,7 @@ const SeasonsAndEpisodes = ({ seasons, tvId }) => {
                 {selectedEpisode && (
                     <div className="movie-player  sm:w-3/4 w-full z-[50]">
                         <iframe
-                            className="w-full h-full z-[50]"
+                            className="w-full min-h-[50vh] sm:h-full z-[50]"
                             src={`https://multiembed.mov/?video_id=${tvId}&tmdb=1&s=${selectedSeason}&e=${selectedEpisode.episode_number}`}
                             allowFullScreen
                         ></iframe>

@@ -36,7 +36,9 @@ const Navbar = () => {
               placeholder="Search..."
               onKeyPress={handleKeyPress}
             />
-            <i onClick={handleClick} className="inline absolute right-[.5rem] z-[99] text-xl p-1 text-gray-700 align-center text-center my-auto fa-solid fa-magnifying-glass"></i>
+            <i onClick={handleClick} className="inline absolute right-[.5rem] 
+            z-[30] text-xl sm:p-1 py-[0.35rem] text-gray-700 align-center text-center my-auto fa-solid 
+            fa-magnifying-glass"></i>
           </div>
           <ThemeToggle />
         </div>

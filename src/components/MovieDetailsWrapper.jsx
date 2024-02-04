@@ -44,7 +44,7 @@ const MovieDetailsWrapper = ({ movie }) => {
             <BackButton />
 
             <div className="flex flex-col justify-center items-center md:flex-row rounded-3xl 
-            p-1 sm:p-3 m-3 sm:scale-100 scale-[90%] sm:m-10 movie-details-content-container
+            p-1 sm:p-3 m-3 sm:scale-100 scale-[95%] sm:m-10 movie-details-content-container
             z-[10]
             ">
                 
@@ -72,7 +72,7 @@ const MovieDetailsWrapper = ({ movie }) => {
 
             <div className='movie-player m-2 sm:m-5 mb-10 w-full h-full z-[50]'>
                 <iframe
-                    className="sm:w-[90%] md:w-[80%] w-[100%] min-h-[45%] sm:min-h-[80vh] z-[50] m-auto rounded-xl border-2 shadow-2xl"
+                    className="sm:w-[90%] md:w-[80%] w-full min-h-[50vh] sm:min-h-[80vh] z-[50] m-auto rounded-xl border-1 shadow-2xl"
                     style={{
                         borderColor: 'rgba(0, 0, 0, 0.5)'
                     }}
