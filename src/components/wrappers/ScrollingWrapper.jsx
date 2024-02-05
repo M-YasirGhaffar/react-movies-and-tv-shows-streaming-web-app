@@ -57,7 +57,7 @@ const ScrollingWrapper = ({ movies, isLoading }) => {
             to={movie.title ? `/movie/${movie.id}` : `/tv/${movie.id}`}
             className="inline-block p-1 m-2 rounded-md transition duration-300 
             ease-in-out hover:transform hover:-translate-y-1 
-            w-[150px] min-w-[150px]"
+            w-[130px] min-w-[130px] sm:w-[150px] sm:min-w-[150px]"
           >
             <img src={movie.poster_path ? `${imageUrlBase}${movie.poster_path}` : '/placeholder.jpeg'} alt={movie.title || movie.original_name} className="w-full h-auto rounded-xl" />
             <p className="my-1 text-center text-wrap break-word">{movie.title || movie.original_name}</p>
