@@ -27,14 +27,14 @@ const SeasonsAndEpisodes = ({ seasons, tvId }) => {
     }, [tvId, selectedSeason]);
 
     return (
-        <div className="flex flex-col bg-[#111111] text-gray-200 h-screen">
-            <div className="flex justify-start items-center">
+        <div className="flex flex-col  dark:bg-[#111111] dark:text-gray-200 h-screen">
+            <div className="flex justify-start border-b dark:border-white border-black items-center">
                 
                 <select
                     onChange={(e) => setSelectedSeason(Number(e.target.value))}
-                    className="sm:w-1/4 w-full px-2 sm:px-4 py-1 sm:py-2 border-b border-gray-200 shadow bg-[#111111] text-gray-200 cursor-pointer 
+                    className="sm:w-1/4 w-full px-2 sm:px-4 py-1 sm:py-2 shadow-sm dark:shadow-gray-200 shadow-gray-950 dark:bg-[#111111] dark:text-gray-200 cursor-pointer 
                     rounded-md
-                    focus:outline-none hover:bg-gray-800 text-xl 
+                    focus:outline-none dark:hover:bg-[#333333be] text-xl 
                     "
                 >
                     {validSeasonNumbers.map((seasonNumber) => (
@@ -52,14 +52,14 @@ const SeasonsAndEpisodes = ({ seasons, tvId }) => {
                     )}
                 </div>
             </div>
-            <div className="flex flex-1 overflow-hidden sm:flex-row flex-col-reverse font-thin sm:font-semibold">
-                <div className="episode-list sm:w-1/4 w-full overflow-y-auto overflow-hidden">
+            <div className="flex flex-1 overflow-hidden sm:flex-row flex-col-reverse font-thin sm:font-normal">
+                <div className="episode-list border-x border-black dark:border-white sm:w-1/4 w-full overflow-y-auto overflow-hidden">
                     {episodes.map((episode) => (
                         <div key={episode.id} onClick={() =>{ 
                             setSelectedEpisode(episode)
                             setSelectedEpisodeId(episode.id);
                         }}
-                        className={`episode-item cursor-pointer p-2 px-5 hover:bg-gray-700 ${selectedEpisodeId === episode.id ? 'bg-gray-800 text-cyan-300' : 'text-gray-200'}`}>
+                        className={`episode-item border-b border-black dark:border-white cursor-pointer p-2 px-5 hover:bg-gray-500  ${selectedEpisodeId === episode.id ? ' text-cyan-500' : 'dark:text-gray-200'}`}>
                             Episode {episode.episode_number}: {episode.name}
                         </div>
                     ))}

@@ -13,15 +13,15 @@ const MovieDetailsWrapper = ({ movie }) => {
         const starElements = [];
       
         for (let i = 0; i < solidStars; i++) {
-          starElements.push(<i class="fa fa-star" key={`solid-${i}`}></i> );
+          starElements.push(<i className="fa fa-star" key={`solid-${i}`}></i> );
         }
       
         if (halfStar) {
-          starElements.push(<i class="fa fa-star-half-full" key={'half'}></i>);
+          starElements.push(<i className="fa fa-star-half-full" key={'half'}></i>);
         }
       
         for (let i = 0; i < emptyStars; i++) {
-          starElements.push(<i class="fa-regular fa-star" key={`empty-${i}`}></i> );
+          starElements.push(<i className="fa-regular fa-star" key={`empty-${i}`}></i> );
         }
       
         return starElements;
@@ -34,8 +34,9 @@ const MovieDetailsWrapper = ({ movie }) => {
 
             style={{
                 background: `url(${imageUrlBase}${movie.backdrop_path})`,
+                backgroundAttachment: 'fixed',
+                backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
-                backgroundPosition: 'center',
             }}
         >
 

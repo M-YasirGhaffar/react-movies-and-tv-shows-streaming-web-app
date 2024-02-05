@@ -9,11 +9,11 @@ const MoviesWrapper = ({ movies, isLoading}) => {
   }
 
   return (
-    <div className="mx-8 flex justify-center">
+    <div className="mx-4 flex justify-center">
       <div className="flex flex-wrap justify-center  p-1">
         {movies.map(movie => (
       <Link to={`/movie/${movie.id}`} key={movie.id} 
-      className="block sm:min-w-[150px] min-w-[120px] p-1 m-1 sm:m-2 rounded-md transition duration-300 ease-in-out hover:transform hover:-translate-y-1"
+      className="block sm:min-w-[150px] min-w-[130px] p-1 m-1 sm:m-2 rounded-md transition duration-300 ease-in-out hover:transform hover:-translate-y-1"
       style={{ maxWidth: 'calc(15% - 1rem)' }} title={`${movie.title}`}>
         <img src={movie.poster_path ? `${imageUrlBase}${movie.poster_path}` : '/placeholder.jpeg'} alt={movie.title}
         className="w-full h-auto rounded-xl" />
