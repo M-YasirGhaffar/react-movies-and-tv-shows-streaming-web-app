@@ -1,6 +1,6 @@
 import React from 'react';
-import SeasonsAndEpisodes from '../SeasonsAndEpisodes';
-import BackButton from '../ui/BackButton';
+import SeasonsAndEpisodes from './SeasonsAndEpisodes';
+import Navbar from '../ui/Navbar';
 
 const TVDetailsWrapper = ({ tvShow }) => {
   const imageUrlBase = 'https://image.tmdb.org/t/p/w500';
@@ -32,14 +32,17 @@ const TVDetailsWrapper = ({ tvShow }) => {
 
   return (
     <>
-    <div className="tv-details-container p-4 min-h-screen flex flex-col justify-center items-center"
+
+    <div className="tv-details-container min-h-screen flex flex-col justify-center items-center"
       style={{
         background: `url(${imageUrlBase}${tvShow.backdrop_path})`,
+        backgroundAttachment: 'fixed',
+        backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
       }}
     >
-      <BackButton />
+      <Navbar />
+
       <div className="flex flex-col justify-center items-center md:flex-row rounded-3xl sm:scale-100 
       scale-[95%] p-2 sm:p-5 m-3 sm:m-10 tv-details-content-container z-10">
         <div className="poster-image m-5" style={{ minWidth: '300px', maxWidth: 'calc(15% - 1rem)' }}>

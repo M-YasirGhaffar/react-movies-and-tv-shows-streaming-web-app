@@ -5,7 +5,6 @@ import { searchMulti } from '../features/search/searchSlice';
 import MoviesWrapper from './wrappers/MoviesWrapper';
 import TVShowsWrapper from './wrappers/TVShowsWrapper';
 import Navbar from './ui/Navbar';
-import BackButton from './ui/BackButton';
 
 const SearchResults = () => {
   const { query } = useParams();
@@ -31,8 +30,6 @@ const SearchResults = () => {
     <div>
     <Navbar />
     
-    <BackButton />
-
     <h1 className="movies-wrapper-title text-center mx-auto text-2xl md:text-3xl lg:text-4xl font-bold hover:-translate-y-1 w-full
      transition duration-300 ease-in-out m-4 p-4">Movies search results for <span className='underline'>{query}</span></h1>
     

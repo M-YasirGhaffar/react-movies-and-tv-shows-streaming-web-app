@@ -1,5 +1,5 @@
 import React from 'react';
-import BackButton from '../ui/BackButton';
+import Navbar from '../ui/Navbar';
 
 const MovieDetailsWrapper = ({ movie }) => {
     const imageUrlBase = 'https://image.tmdb.org/t/p/w500';
@@ -30,7 +30,7 @@ const MovieDetailsWrapper = ({ movie }) => {
     const stars = countStars(movie.vote_average);
 
     return (
-        <div className="movie-details-container sm:p-4 p-2 sm:min-h-screen flex flex-col justify-center items-center"
+        <div className="movie-details-container sm:min-h-screen flex flex-col justify-center items-center"
 
             style={{
                 background: `url(${imageUrlBase}${movie.backdrop_path})`,
@@ -39,9 +39,7 @@ const MovieDetailsWrapper = ({ movie }) => {
             }}
         >
 
-
-
-            <BackButton />
+            <Navbar />
 
             <div className="flex flex-col justify-center items-center md:flex-row rounded-3xl 
             p-1 sm:p-3 m-3 sm:scale-100 scale-[95%] sm:m-10 movie-details-content-container

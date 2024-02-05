@@ -7,7 +7,6 @@ import TopRatedMovies from './TopRatedMovies';
 import TopRatedTvShows from './TopRatedTvShows';
 import AllTrendingMoviesAndTvShows from './AllTrendingMoviesAndTvShows';
 import Navbar from './ui/Navbar';
-import Footer from './ui/Footer';
 
 const Dashboard = () => {
   const [popularToggle, setPopularToggle] = useState('movie');
@@ -81,7 +80,6 @@ const Dashboard = () => {
         </div>
         {topRatedToggle === 'movie' ? <TopRatedMovies /> : <TopRatedTvShows />}
       </div>
-      <Footer />
     </div>
   );
 };

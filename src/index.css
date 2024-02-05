@@ -78,8 +78,8 @@ body {
 
 .stars:hover > i{
   /* opacity: 1; */
-  transition: 1s ease;
-  transform: rotateY(180deg);
+  color: #e3b922cc;
+
 }
 
 .movie-info p, .movie-info div {
